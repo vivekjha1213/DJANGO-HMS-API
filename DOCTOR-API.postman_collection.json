@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "6e65e7f6-1c87-4e25-a701-672c7233f719",
+		"name": "DOCTOR-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20295406",
+		"_collection_link": "https://martian-resonance-688413.postman.co/workspace/My-Workspace~79e64b6d-ec8a-499a-8ef4-26570ddeb191/collection/20295406-6e65e7f6-1c87-4e25-a701-672c7233f719?action=share&creator=20295406&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "doctor-register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"first_name\": \"Ravi\",\n  \"last_name\": \"kumar\",\n  \"email\": \"kumarRavi@example.com\",\n  \"phone_number\": \"1234567890\",\n  \"specialty\": \"Cardiology\",\n  \"qualifications\": \"MBBS, MD\",\n  \"address\": \"123 Main Street\",\n  \"gender\": \"Male\",\n  \"date_of_birth\": \"1980-01-01\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of Doctor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/list/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "doctor list by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/doctors/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"doctors",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "doctor update id Patch",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Vivek",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "kumar",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "Vivekjha@example.com",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "1234567890",
+							"type": "text"
+						},
+						{
+							"key": "specialty",
+							"value": "Cardiology",
+							"type": "text"
+						},
+						{
+							"key": "qualifications",
+							"value": "MBBS, MD",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Gurgaon",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "2000-08-01",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/vivek/Desktop/Top Interview 150.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/doctorUpdate/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"doctorUpdate",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "doctor update details by put id ",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Vivek",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "kumar",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "Vivekjha@example.com",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "1234567890",
+							"type": "text"
+						},
+						{
+							"key": "specialty",
+							"value": "Cardiology",
+							"type": "text"
+						},
+						{
+							"key": "qualifications",
+							"value": "MBBS, MD",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Gurgaon",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "2000-08-01",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/vivek/Desktop/Screenshot 2023-06-21 at 11.19.32 AM.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/doctorUpdate/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"doctorUpdate",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Vivek",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "kumar",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "Vivekjha@example.com",
+							"disabled": true
+						},
+						{
+							"key": "phone_number",
+							"value": "1234567890",
+							"disabled": true
+						},
+						{
+							"key": "specialty",
+							"value": "Cardiology",
+							"disabled": true
+						},
+						{
+							"key": "qualifications",
+							"value": "MBBS, MD",
+							"disabled": true
+						},
+						{
+							"key": "address",
+							"value": "Gurgaon",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"disabled": true
+						},
+						{
+							"key": "date_of_birth",
+							"value": "2000-08-01",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"value": "http://127.0.0.1:8000/image/Top_Interview_150_SEpYjZU.jpg",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete doctor by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/delete/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"delete",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Retrieves a list of doctors based on a search query.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/search/?query=vivek",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "vivek"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "total doctors count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/count",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"count"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
